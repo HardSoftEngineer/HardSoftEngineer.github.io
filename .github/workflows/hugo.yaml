@@ -81,17 +81,18 @@ jobs:
         run: |
           echo "Check site folder:"
           ls -l "./site/"
-          hugo \
+          HUGO_LOG=debug hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache" \
             --source "./site" \
-            --destination "./public"
-          echo "Check public folder:"
-          ls -l "./public"
+            --destination "./public" \
+            --verbose
           echo "Check site folder:"
           ls -l "./site/"
+          echo "Check public folder:"
+          ls -l "./public"
       - name: Check public folder
         run: |
           ls -R ./public || echo "public folder not found"

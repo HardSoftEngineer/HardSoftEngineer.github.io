@@ -90,6 +90,8 @@ jobs:
             --destination "./public"
           echo "Check public folder:"
           ls -l "./public"
+          echo "Check site folder:"
+          ls -l "./site/"
       - name: Check public folder
         run: |
           ls -R ./public || echo "public folder not found"

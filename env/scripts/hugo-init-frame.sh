@@ -6,6 +6,8 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 SITE_DIR="$SCRIPT_DIR/../../site"
 DOCKER_IMAGE="ghcr.io/gohugoio/hugo:v0.154.4"
 
+cd "$SCRIPT_DIR"
+
 if [ -f "$SITE_DIR/hugo.toml" ]; then
   echo "Hugo site already initialized, skipping."
   exit 0

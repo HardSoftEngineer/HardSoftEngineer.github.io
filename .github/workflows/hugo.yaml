@@ -80,11 +80,7 @@ jobs:
       - name: Build the site
         run: |
           echo "Check site folder:"
-          ls -l site/
           ls -l "${HOME}/site/"
-          echo "Check site/public folder:"
-          ls -l site/public
-          ls -l "${HOME}/site/public"
           hugo \
             --gc \
             --minify \
@@ -93,11 +89,7 @@ jobs:
             --source "${HOME}/site" \
             --destination "${HOME}/public"
           echo "Check public folder:"
-          ls -l public
           ls -l "${HOME}/public"
-          echo "Check site/public folder:"
-          ls -l site/public
-          ls -l "${HOME}/site/public"
       - name: Cache save
         id: cache-save
         uses: actions/cache/save@v4

@@ -3,6 +3,7 @@
 /site/public/
 
 # Hugo cache
+/resources/_gen/
 /site/resources/_gen/
 
 # Node/npm (если используешь)

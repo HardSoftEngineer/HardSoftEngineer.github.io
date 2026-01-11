@@ -79,23 +79,11 @@ jobs:
             hugo-
       - name: Build the site
         run: |
-          echo "Check site folder:"
-          ls -l "./site/"
-          HUGO_LOG=debug hugo \
+          hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
-            --cacheDir "${{ runner.temp }}/hugo_cache" \
-            --source "./site" \
-            --destination "./public" \
-            --logLevel debug
-          echo "Check site folder:"
-          ls -l "./site/"
-          echo "Check public folder:"
-          ls -l "./public"
-      - name: Check public folder
-        run: |
-          ls -R ./public || echo "public folder not found"
+            --cacheDir "${{ runner.temp }}/hugo_cache"
       - name: Cache save
         id: cache-save
         uses: actions/cache/save@v4

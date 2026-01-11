@@ -43,7 +43,7 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Create directory for user-specific executable files
         run: |
-          mkdir -p "${HOME}/site/.local"
+          mkdir -p "${HOME}/.local"
       - name: Install Dart Sass
         run: |
           curl -sLJO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"

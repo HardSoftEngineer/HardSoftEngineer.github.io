@@ -86,6 +86,12 @@ jobs:
             --cacheDir "${{ runner.temp }}/hugo_cache" \
             --source site \
             --destination public
+          echo "Check public folder:"
+          ls -l public
+          echo "Check site folder:"
+          ls -l site/
+          echo "Check site/public folder:"
+          ls -l site/public
       - name: Cache save
         id: cache-save
         uses: actions/cache/save@v4

@@ -5,8 +5,11 @@ services:
       server
       --bind 0.0.0.0
       --disableFastRender
+      --cleanDestinationDir=true
+      --printPathWarnings 
+      --logLevel=debug
     ports:
       - "1313:1313"
     volumes:
-      - ../../site:/project
+      - ../..:/project
     working_dir: /project

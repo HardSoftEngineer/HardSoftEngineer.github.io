@@ -22,3 +22,14 @@ docker logs docker-hugo-1 -f
 ```
 ./env/scripts/compose-stop.sh
 ```
+
+## HUGO
+
+https://gohugo.io/host-and-deploy/host-on-github-pages/
+
+```
+mkdir -p .github/workflows
+...
+```
+
+https://gohugo.io/commands/hugo/

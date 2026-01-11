@@ -1,5 +1,17 @@
 # Hugo output
 /public/
+/site/public/
+
+# Hugo cache
+/site/resources/_gen/
+
+# Node/npm (если используешь)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
 
 # OS
 .DS_Store
@@ -10,14 +22,3 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
-
-# Hugo cache
-/resources/_gen/
-
-# Node/npm (если используешь)
-node_modules/
-package-lock.json
-yarn.lock
-
-# Logs
-*.log

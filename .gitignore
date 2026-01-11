@@ -1,0 +1,23 @@
+# Hugo output
+/public/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Hugo cache
+/resources/_gen/
+
+# Node/npm (если используешь)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Logs
+*.log

@@ -80,16 +80,19 @@ jobs:
       - name: Build the site
         run: |
           echo "Check site folder:"
-          ls -l "${HOME}/site/"
+          ls -l "./site/"
           hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache" \
-            --source "${HOME}/site" \
-            --destination "${HOME}/public"
+            --source "./site" \
+            --destination "./public"
           echo "Check public folder:"
-          ls -l "${HOME}/public"
+          ls -l "./public"
+      - name: Check public folder
+        run: |
+          ls -R ./public || echo "public folder not found"
       - name: Cache save
         id: cache-save
         uses: actions/cache/save@v4
